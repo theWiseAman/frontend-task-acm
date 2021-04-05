@@ -1,4 +1,4 @@
-# Frontend Assignment
+# Frontend Assignment :pencil:
 
 ### Please implement page in assests folder with the name design.png in software stack of your choice with the following requirements:
 
