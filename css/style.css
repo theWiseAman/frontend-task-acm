@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100vw;
+}
+
+body header {
+  height: 80vh;
+  padding-top: 5vh;
+  background-image: url("../images/pexels-asad-photo-maldives-3601422.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body header .navBar {
+  height: 80px;
+  width: 80vw;
+  background-color: white;
+  margin: 0 10vw;
+  padding: 15px;
+  -webkit-box-shadow: 2px 2px 2px gray, -2px 2px 2px gray, 2px -2px 2px gray, -2px -2px 2px gray;
+          box-shadow: 2px 2px 2px gray, -2px 2px 2px gray, 2px -2px 2px gray, -2px -2px 2px gray;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% auto auto auto auto;
+      grid-template-columns: 40% auto auto auto auto;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body header .navBar img {
+  height: 30px;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translate(0%, -50%);
+          transform: translate(0%, -50%);
+}
+
+body header .navBar button {
+  padding: 5px;
+  border: none;
+  background-color: white;
+  color: blue;
+  font-size: 13px;
+  cursor: pointer;
+  height: 80px;
+}
+
+body header .navBar button:hover {
+  background-color: lightgrey;
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+body header .navBar button:focus {
+  outline: none;
+  color: black;
+  background-color: lightgrey;
+}
+
+body .content .holderDiv {
+  width: 80vw;
+  background-color: lightgrey;
+  margin: 0 10vw;
+  margin-top: -150px;
+  margin-bottom: -40px;
+}
+
+body .content .holderDiv .userComments {
+  background-color: white;
+  width: 60vw;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 50px 10vw;
+  position: relative;
+  top: -75px;
+  text-align: center;
+}
+
+body .content .holderDiv .userComments img {
+  border: white 3px solid;
+  border-radius: 50%;
+  margin-top: -40px;
+}
+
+body .content .holderDiv .userComments .name {
+  color: blue;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+body .content .holderDiv .userComments .date {
+  color: gray;
+  font-size: 11px;
+}
+
+body .content .holderDiv .userComments h2 {
+  font-weight: 100;
+  margin: 10px;
+  padding: 10px;
+}
+
+body .content .holderDiv .userComments .ratings {
+  border: lightgrey solid 1px;
+  width: 60%;
+  margin: auto;
+  text-align: left;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 6fr 1fr;
+      grid-template-columns: auto 6fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .content .holderDiv .userComments .ratings .fa-thumbs-up {
+  font-size: 1.75em;
+  background-color: limegreen;
+  color: white;
+  padding: 10px 20px;
+}
+
+body .content .holderDiv .userComments .ratings .fa-thumbs-down {
+  font-size: 1.75em;
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+}
+
+body .content .holderDiv .userComments .ratings .starList {
+  padding: 10px 15px;
+}
+
+body .content .holderDiv .userComments .ratings .starList .fa-star {
+  color: gold;
+  font-size: 1.25em;
+  padding: 2.5px;
+}
+
+body .content .holderDiv .userComments .ratings .starList .starGrey {
+  color: lightgrey;
+}
+
+body .content .holderDiv .userComments .ratings .starRate {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+body .content .holderDiv .userComments p {
+  font-size: 13px;
+  padding: 10px;
+  margin: 10px auto;
+  text-align: left;
+  width: 50vw;
+}
+
+body .content .holderDiv .userComments button {
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 15px 60px;
+  margin: 10px;
+  margin-bottom: 25px;
+  border: none;
+  background-color: gold;
+  color: purple;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+body .content .holderDiv .userComments button:focus {
+  outline: none;
+}
+
+body .content footer p {
+  padding: 20px;
+  text-align: center;
+  color: grey;
+  font-size: 14px;
+}
+/*# sourceMappingURL=style.css.map */

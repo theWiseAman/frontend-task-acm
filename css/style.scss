@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  align-content: center;
+  width: 100vw;
+
+  header {
+    height: 80vh;
+    padding-top: 5vh;
+    background-image: url("../images/pexels-asad-photo-maldives-3601422.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .navBar {
+      height: 80px;
+      width: 80vw;
+      background-color: white;
+      margin: 0 10vw;
+      padding: 15px;
+      box-shadow: 2px 2px 2px gray, -2px 2px 2px gray, 2px -2px 2px gray,
+        -2px -2px 2px gray;
+      display: grid;
+      grid-template-columns: 40% auto auto auto auto;
+      align-content: center;
+
+      img {
+        height: 30px;
+        position: relative;
+        top: 50%;
+        transform: translate(0%, -50%);
+      }
+
+      button {
+        padding: 5px;
+        border: none;
+        background-color: white;
+        color: blue;
+        font-size: 13px;
+        cursor: pointer;
+        height: 80px;
+      }
+      button:hover {
+        background-color: lightgrey;
+        color: blueviolet;
+        text-decoration: underline;
+      }
+      button:focus {
+        outline: none;
+        color: black;
+        background-color: lightgrey;
+      }
+    }
+  }
+  .content {
+    .holderDiv {
+      width: 80vw;
+      background-color: lightgrey;
+      margin: 0 10vw;
+      margin-top: -150px;
+      margin-bottom: -40px;
+
+      .userComments {
+        background-color: white;
+        width: 60vw;
+        height: max-content;
+        margin: 50px 10vw;
+        position: relative;
+        top: -75px;
+        text-align: center;
+
+        img {
+          border: white 3px solid;
+          border-radius: 50%;
+          margin-top: -40px;
+        }
+
+        .name {
+          color: blue;
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .date {
+          color: gray;
+          font-size: 11px;
+        }
+        h2 {
+          font-weight: 100;
+          margin: 10px;
+          padding: 10px;
+        }
+
+        .ratings {
+          border: lightgrey solid 1px;
+          width: 60%;
+          margin: auto;
+          text-align: left;
+          display: grid;
+          grid-template-columns: auto 6fr 1fr;
+          align-items: center;
+
+          .fa-thumbs-up {
+            font-size: 1.75em;
+            background-color: limegreen;
+            color: white;
+            padding: 10px 20px;
+          }
+          .fa-thumbs-down {
+            font-size: 1.75em;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+          }
+
+          .starList {
+            padding: 10px 15px;
+
+            .fa-star {
+              color: gold;
+              font-size: 1.25em;
+              padding: 2.5px;
+            }
+            .starGrey {
+              color: lightgrey;
+            }
+          }
+
+          .starRate {
+            font-weight: 700;
+            font-size: 14px;
+          }
+        }
+
+        p {
+          font-size: 13px;
+          padding: 10px;
+          margin: 10px auto;
+          text-align: left;
+          width: 50vw;
+        }
+
+        button {
+          cursor: pointer;
+          text-transform: uppercase;
+          padding: 15px 60px;
+          margin: 10px;
+          margin-bottom: 25px;
+          border: none;
+          background-color: gold;
+          color: purple;
+          font-weight: 700;
+          font-size: 13px;
+        }
+        button:focus {
+          outline: none;
+        }
+      }
+    }
+
+    footer {
+      p {
+        padding: 20px;
+        text-align: center;
+        color: grey;
+        font-size: 14px;
+      }
+    }
+  }
+}
