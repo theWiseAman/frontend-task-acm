@@ -12,12 +12,15 @@ body {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  width: 100vw;
+  width: 100%;
+  min-width: 300px;
 }
 
 body header {
   height: 80vh;
-  padding-top: 5vh;
+  min-height: 400px;
+  max-height: 1000px;
+  padding-top: 3%;
   background-image: url("../images/pexels-asad-photo-maldives-3601422.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -25,11 +28,14 @@ body header {
 }
 
 body header .navBar {
-  height: 80px;
-  width: 80vw;
+  height: 100px;
+  width: 80%;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
   background-color: white;
-  margin: 0 10vw;
-  padding: 15px;
+  margin: 0 auto;
+  padding: 20px;
   -webkit-box-shadow: 2px 2px 2px gray, -2px 2px 2px gray, 2px -2px 2px gray, -2px -2px 2px gray;
           box-shadow: 2px 2px 2px gray, -2px 2px 2px gray, 2px -2px 2px gray, -2px -2px 2px gray;
   display: -ms-grid;
@@ -55,7 +61,7 @@ body header .navBar button {
   color: blue;
   font-size: 13px;
   cursor: pointer;
-  height: 80px;
+  height: 100px;
 }
 
 body header .navBar button:focus {
@@ -70,20 +76,20 @@ body header .navBar button:hover {
 }
 
 body .content .holderDiv {
-  width: 80vw;
+  width: 80%;
   background-color: lightgrey;
-  margin: 0 10vw;
+  margin: 0 auto;
   margin-top: -150px;
   margin-bottom: -40px;
 }
 
 body .content .holderDiv .userComments {
   background-color: white;
-  width: 60vw;
+  width: 80%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  margin: 50px 10vw;
+  margin: 50px auto;
   position: relative;
   top: -75px;
   text-align: center;
@@ -107,14 +113,17 @@ body .content .holderDiv .userComments .date {
 }
 
 body .content .holderDiv .userComments h2 {
-  font-weight: 100;
+  font-weight: 400;
+  font-size: 20px;
   margin: 10px;
   padding: 10px;
 }
 
 body .content .holderDiv .userComments .ratings {
   border: lightgrey solid 1px;
-  width: 60%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin: auto;
   text-align: left;
   display: -ms-grid;
@@ -164,12 +173,18 @@ body .content .holderDiv .userComments p {
   padding: 10px;
   margin: 10px auto;
   text-align: left;
-  width: 70%;
+  width: 75%;
   cursor: pointer;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+  -webkit-mask-image: linear-gradient(white, rgba(255, 255, 255, 0));
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(white), to(rgba(255, 255, 255, 0)));
+          mask-image: linear-gradient(white, rgba(255, 255, 255, 0));
 }
 
 body .content .holderDiv .userComments p:hover {
   font-size: 15px;
+  -webkit-mask-image: none;
+          mask-image: none;
   -webkit-transition: all ease-in-out 200ms;
   transition: all ease-in-out 200ms;
 }
@@ -184,7 +199,7 @@ body .content .holderDiv .userComments textarea {
 
 body .content .holderDiv .userComments .comments {
   background-color: #ececec;
-  width: 80%;
+  width: 85%;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -212,10 +227,16 @@ body .content .holderDiv .userComments .comments .managerComments {
   text-align: left;
   font-size: 13px;
   cursor: pointer;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(#ececec), to(rgba(236, 236, 236, 0)));
+  -webkit-mask-image: linear-gradient(#ececec, rgba(236, 236, 236, 0));
+          mask-image: -webkit-gradient(linear, left top, left bottom, from(#ececec), to(rgba(236, 236, 236, 0)));
+          mask-image: linear-gradient(#ececec, rgba(236, 236, 236, 0));
 }
 
 body .content .holderDiv .userComments .comments .managerComments:hover {
   font-size: 14px;
+  -webkit-mask-image: none;
+          mask-image: none;
   -webkit-transition: all ease-in-out 200ms;
   transition: all ease-in-out 200ms;
 }
@@ -260,5 +281,47 @@ body .content footer p {
   text-align: center;
   color: grey;
   font-size: 14px;
+}
+
+@media all and (max-width: 700px) {
+  body header {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  body header .navBar {
+    height: 70px;
+  }
+  body header .navBar button {
+    height: 70px;
+  }
+  body .content .holderDiv {
+    margin-top: -50px;
+    width: 100%;
+  }
+  body .content .holderDiv .userComments {
+    width: 75%;
+  }
+  body .content .holderDiv .userComments h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  body header .navBar {
+    width: 70%;
+    padding-left: 30px;
+  }
+  body .content .holderDiv {
+    width: 70%;
+  }
+  body .content .holderDiv .userComments {
+    width: 75%;
+    position: relative;
+    top: -125px;
+  }
+  body .content .holderDiv .userComments h2 {
+    font-size: 24px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
