@@ -58,13 +58,12 @@ body header .navBar button {
   height: 80px;
 }
 
-body header .navBar button:hover {
-  background-color: lightgrey;
-  color: blueviolet;
-  text-decoration: underline;
+body header .navBar button:focus {
+  outline: none;
 }
 
-body header .navBar button:focus {
+body header .navBar .active,
+body header .navBar button:hover {
   outline: none;
   color: black;
   background-color: lightgrey;
@@ -165,7 +164,78 @@ body .content .holderDiv .userComments p {
   padding: 10px;
   margin: 10px auto;
   text-align: left;
-  width: 50vw;
+  width: 70%;
+  cursor: pointer;
+}
+
+body .content .holderDiv .userComments p:hover {
+  font-size: 15px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+body .content .holderDiv .userComments textarea {
+  display: block;
+  width: 70%;
+  height: 100px;
+  margin: auto;
+  padding: 5px 10px;
+}
+
+body .content .holderDiv .userComments .comments {
+  background-color: #ececec;
+  width: 80%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: auto;
+  padding: 10px;
+  padding-bottom: 35px;
+  text-align: center;
+}
+
+body .content .holderDiv .userComments .comments .arrow {
+  margin: auto;
+  margin-top: -25px;
+  width: 50px;
+  height: 30px;
+  background-color: #ececec;
+  -webkit-clip-path: polygon(50% 0%, 0% 50%, 100% 50%);
+          clip-path: polygon(50% 0%, 0% 50%, 100% 50%);
+}
+
+body .content .holderDiv .userComments .comments h4 {
+  font-size: 14px;
+}
+
+body .content .holderDiv .userComments .comments .managerComments {
+  text-align: left;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+body .content .holderDiv .userComments .comments .managerComments:hover {
+  font-size: 14px;
+  -webkit-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+body .content .holderDiv .userComments .managerImg {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  margin-top: -30px;
+}
+
+body .content .holderDiv .userComments .managerName {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+body .content .holderDiv .userComments .managerDesig {
+  font-size: 12px;
+  padding-bottom: 20px;
 }
 
 body .content .holderDiv .userComments button {

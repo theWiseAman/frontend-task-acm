@@ -6,10 +6,52 @@ function append(parent, element) {
     return parent.appendChild(element);
 }
 
+function addComment(element) {
+    let textarea = createUser('textarea');
+    textarea.setAttribute("placeholder", "Add your comments");
+    element.insertBefore(textarea, element.childNodes[6]);
+    let button = element.childNodes[7];
+    button.innerHTML = "post comment";
+    button.setAttribute("onclick", "postComment(this.parentNode, this)");
+    return 1;
+}
+
+function postComment(element, child) {
+    let div = createUser('div'),
+        arrow = createUser('div'),
+        h4 = createUser('h4'),
+        img = createUser('img'),
+        name = createUser('div'),
+        desig = createUser('div'),
+        comments = createUser('div');
+    comments.innerHTML = child.previousSibling.value;
+    div.classList.add('comments');
+    comments.classList.add('managerComments');
+    h4.innerHTML = "Comment";
+    arrow.classList.add('arrow');
+    img.src = "./images/batman.png";
+    name.innerHTML = "Batman";
+    desig.innerHTML = "Finance is my Minister!!";
+    img.classList.add("managerImg");
+    name.classList.add("managerName");
+    desig.classList.add("managerDesig");
+    append(div, arrow);
+    append(div, h4);
+    append(div, comments);
+    append(element, div); 
+    append(element, img);
+    append(element, name);
+    append(element, desig);
+    child.previousSibling.remove();
+    child.remove();
+    return 1;
+}
+
 function randomDate(date) {
     var d = new Date(date);
+    var td = new Date();
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var commentDate = d.getDate() + " " + months[d.getMonth()] + " " + 2020;
+    var commentDate = d.getDate() + " " + months[d.getMonth()] + " " + (td.getFullYear() - 1);
     return commentDate;
 }
 
@@ -68,6 +110,7 @@ fetch('https://randomuser.me/api/?results=4')
             createRatings(ratings);
             p.innerHTML = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, sunt numquam eveniet, debitis praesentium placeat corporis harum, consequatur alias provident tenetur voluptatem officia dolore eligendi. Facilis, molestias fuga iste cumque ipsam reprehenderit? Magnam voluptas, expedita soluta atque non praesentium optio corporis! Ipsam totam ipsa repudiandae tenetur? Natus dolor blanditiis aliquid.";
             button.innerHTML = "add comment";
+            button.setAttribute("onclick", "addComment(this.parentNode)");
             append(div, img);
             append(div, name);
             append(div, date);

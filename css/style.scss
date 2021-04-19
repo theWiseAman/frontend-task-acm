@@ -48,12 +48,11 @@ body {
         cursor: pointer;
         height: 80px;
       }
-      button:hover {
-        background-color: lightgrey;
-        color: blueviolet;
-        text-decoration: underline;
-      }
       button:focus {
+        outline: none;
+      }
+      .active,
+      button:hover {
         outline: none;
         color: black;
         background-color: lightgrey;
@@ -145,9 +144,68 @@ body {
           padding: 10px;
           margin: 10px auto;
           text-align: left;
-          width: 50vw;
+          width: 70%;
+          cursor: pointer;
+        }
+        p:hover {
+          font-size: 15px;
+          transition: all ease-in-out 200ms;
         }
 
+        textarea {
+          display: block;
+          width: 70%;
+          height: 100px;
+          margin: auto;
+          padding: 5px 10px;
+        }
+
+        .comments {
+          background-color: rgb(236, 236, 236);
+          width: 80%;
+          height: max-content;
+          margin: auto;
+          padding: 10px;
+          padding-bottom: 35px;
+          text-align: center;
+
+          .arrow {
+            margin: auto;
+            margin-top: -25px;
+            width: 50px;
+            height: 30px;
+            background-color: rgb(236, 236, 236);
+            clip-path: polygon(50% 0%, 0% 50%, 100% 50%);
+          }
+
+          h4 {
+            font-size: 14px;
+          }
+          .managerComments {
+            text-align: left;
+            font-size: 13px;
+            cursor: pointer;
+          }
+          .managerComments:hover {
+            font-size: 14px;
+            transition: all ease-in-out 200ms;
+          }
+        }
+        .managerImg {
+          display: block;
+          width: 60px;
+          height: 60px;
+          margin: auto;
+          margin-top: -30px;
+        }
+        .managerName {
+          font-size: 13px;
+          font-weight: 700;
+        }
+        .managerDesig {
+          font-size: 12px;
+          padding-bottom: 20px;
+        }
         button {
           cursor: pointer;
           text-transform: uppercase;
