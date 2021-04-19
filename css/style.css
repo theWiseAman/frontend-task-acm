@@ -28,7 +28,7 @@ body header {
 }
 
 body header .navBar {
-  height: 100px;
+  height: 95px;
   width: 80%;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
@@ -61,7 +61,7 @@ body header .navBar button {
   color: blue;
   font-size: 13px;
   cursor: pointer;
-  height: 100px;
+  height: 95px;
 }
 
 body header .navBar button:focus {
@@ -285,8 +285,8 @@ body .content footer p {
 
 @media all and (max-width: 700px) {
   body header {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   body header .navBar {
     height: 70px;
@@ -307,10 +307,20 @@ body .content footer p {
   }
 }
 
+@media all and (max-width: 450px) {
+  body header .navBar {
+    width: 100px;
+  }
+}
+
 @media all and (min-width: 1000px) {
   body header .navBar {
     width: 70%;
+    height: 110px;
     padding-left: 30px;
+  }
+  body header .navBar button {
+    height: 110px;
   }
   body .content .holderDiv {
     width: 70%;
