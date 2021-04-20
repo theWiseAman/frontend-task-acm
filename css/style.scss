@@ -13,6 +13,10 @@ body {
   width: 100%;
   min-width: 300px;
 
+  .navBarMob {
+    display: none;
+  }
+
   header {
     height: 80vh;
     min-height: 400px;
@@ -24,7 +28,7 @@ body {
     background-size: cover;
 
     .navBar {
-      height: 95px;
+      height: 90px;
       width: 80%;
       min-width: max-content;
       background-color: white;
@@ -50,7 +54,7 @@ body {
         color: blue;
         font-size: 13px;
         cursor: pointer;
-        height: 95px;
+        height: 90px;
       }
       button:focus {
         outline: none;
@@ -66,7 +70,7 @@ body {
   .content {
     .holderDiv {
       width: 80%;
-      background-color: lightgrey;
+      background-color: rgb(241, 241, 241);
       margin: 0 auto;
       margin-top: -150px;
       margin-bottom: -40px;
@@ -278,9 +282,85 @@ body {
 }
 @media all and (max-width: 450px) {
   body {
+    .navBarMob {
+      display: block;
+      height: 80px;
+      width: 100%;
+      background-color: rgb(255, 229, 255);
+      padding: 20px;
+
+      button {
+        position: relative;
+        top: 50%;
+        transform: translate(0%, -75%);
+        border: none;
+        background-color: rgb(255, 229, 255);
+      }
+      button:focus {
+        outline: none;
+      }
+      .hidden {
+        display: none;
+      }
+      .fa-bars {
+        font-size: 30px;
+      }
+      .fa-times {
+        font-size: 35px;
+      }
+
+      img {
+        height: 40px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-65%, -35%);
+      }
+
+      .modal {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        width: 350px;
+        height: 200px;
+        background-color: rgb(255, 236, 255);
+        ul {
+          list-style: none;
+          border: purple solid 2px;
+          li {
+            padding-left: 15px;
+            width: 100%;
+            height: 50px;
+            border-bottom: purple 1px solid;
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            a {
+              text-decoration: none;
+              color: maroon;
+            }
+          }
+          li:hover,
+          .active {
+            background-color: rgb(236, 116, 236);
+          }
+        }
+      }
+    }
     header {
+      height: 400px;
       .navBar {
-        width: 100px;
+        display: none;
+      }
+    }
+    .content {
+      .holderDiv {
+        padding-top: 100px;
+        .userComments {
+          width: 100%;
+          margin-top: 75px;
+        }
       }
     }
   }
@@ -290,11 +370,11 @@ body {
     header {
       .navBar {
         width: 70%;
-        height: 110px;
+        height: 100px;
         padding-left: 30px;
 
         button {
-          height: 110px;
+          height: 100px;
         }
       }
     }
